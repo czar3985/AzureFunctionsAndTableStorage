@@ -13,6 +13,5 @@ namespace ClientMaster
         public DateTimeOffset LastModifiedOn { get; set; }
         public string Locale { get; set; }
         public string ZoneInfo { get; set; }
-        public string ResponseMessage { get; set; }
     }
 }

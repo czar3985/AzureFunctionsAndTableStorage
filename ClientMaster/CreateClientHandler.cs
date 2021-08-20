@@ -15,6 +15,7 @@ namespace ClientMaster
         [FunctionName("create")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
+            [Queue("outqueue"), StorageAccount("AzureWebJobsStorage")] ICollector<string> msg,
             ILogger log)
         {
             log.LogInformation("CreateClientHandler HTTP trigger function started processing request");
@@ -30,16 +31,14 @@ namespace ClientMaster
             {
                 newClient.Id = Guid.NewGuid();
                 newClient.CreatedOn = DateTimeOffset.Now;
-                newClient.ResponseMessage =
-                    $"CreateClientHandler HTTP triggered function executed successfully for {name}.";
-            }
-            else
-            {
-                newClient.ResponseMessage =
-                    "CreateClientHandler HTTP triggered function executed successfully. Pass a client name in the query string to create a new client.";
+
+                // Add a message to the output collection.
+                msg.Add($"Client name added: {name}");
+
+                return new OkObjectResult(newClient);
             }
 
-            return new OkObjectResult(newClient);
+            return new BadRequestObjectResult("Please pass a client name on the query string or in the request body");
         }
     }
 }
