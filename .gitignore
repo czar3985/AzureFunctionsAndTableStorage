@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/ClientMaster/Properties/serviceDependencies.func-create-client - Zip Deploy.json
+/ClientMaster/Properties/ServiceDependencies/func-create-client - Zip Deploy/storage1.arm.json
