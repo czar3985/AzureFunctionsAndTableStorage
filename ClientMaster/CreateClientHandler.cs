@@ -30,7 +30,6 @@ namespace ClientMaster
             if (!string.IsNullOrEmpty(name))
             {
                 newClient.Id = Guid.NewGuid();
-                newClient.CreatedOn = DateTimeOffset.Now;
 
                 // Add a message to the output collection.
                 msg.Add($"Client name added: {name}");
