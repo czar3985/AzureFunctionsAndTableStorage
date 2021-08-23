@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientMaster", "ClientMaster\ClientMaster.csproj", "{DD7E1378-8953-4D4A-A0AD-6EBB9E887057}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueTriggerTableInput", "QueueTriggerTableInput\QueueTriggerTableInput.csproj", "{662E2A35-474E-4EFF-AE52-91BAAC04D027}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueTriggerTableInput", "QueueTriggerTableInput\QueueTriggerTableInput.csproj", "{662E2A35-474E-4EFF-AE52-91BAAC04D027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerTriggerCloudTableInput", "TimerTriggerCloudTableInput\TimerTriggerCloudTableInput.csproj", "{750B860A-099E-481E-A879-EA839988EB05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimerTriggerCloudTableInput", "TimerTriggerCloudTableInput\TimerTriggerCloudTableInput.csproj", "{750B860A-099E-481E-A879-EA839988EB05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorage", "TableStorage\TableStorage.csproj", "{30DE2363-6CA7-4C5E-81E5-650DADCB1285}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{750B860A-099E-481E-A879-EA839988EB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{750B860A-099E-481E-A879-EA839988EB05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{750B860A-099E-481E-A879-EA839988EB05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30DE2363-6CA7-4C5E-81E5-650DADCB1285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30DE2363-6CA7-4C5E-81E5-650DADCB1285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30DE2363-6CA7-4C5E-81E5-650DADCB1285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30DE2363-6CA7-4C5E-81E5-650DADCB1285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
